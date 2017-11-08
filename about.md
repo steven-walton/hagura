@@ -1,12 +1,12 @@
 ---
-title: About Me
+title: About
 layout: post
 permalink: /about/
 published: true
 ---
 
 Topics you'll find in this blog:
-    
+
   * Engineering
   * Whitewater
   * Kayaking
