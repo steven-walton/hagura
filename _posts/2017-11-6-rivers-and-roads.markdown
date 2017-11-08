@@ -18,10 +18,10 @@ September 2016. My first time running a rapid in a kayak. It's was a beginner cl
 
 I reached the bottom of the rapid, but not upright in my kayak. One of the last waves caught my boat and spun me around before flipping me on an eddyline. A rush of icy water, endorphins, and adrenaline. I came out of the water wet, cold, and grinning. I've been addicted ever since.
 
-Since then, I've been gradually taking on new challenges on the river, I've also busy figuring out what makes the whole thing tick: from the hydraulics of surf waves and sticky holes to the policy decisions that affect whitewater recreation.
+In the past year since my first kayaking experience, I've been gradually taking on new challenges on the river. I've also busy figuring out what makes the whole thing tick: from the hydraulics of surf waves and sticky holes to the policy decisions that affect whitewater recreation.
 
 My intention for  this blog is to cover a number of river and water resources related topics, some personal and some technical, including:
-  * Some of my personal experiences learning how to kayak
+  * Some of my experiences learning how to kayak
   * Exploration of questions such as, "What makes some holes more retentive than others?"
   * Applications of python programming and data science in hydrology  
   * Discussion of water resource policy
