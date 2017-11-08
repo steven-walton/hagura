@@ -1,6 +1,6 @@
 ### your site title here
 
-title: Steven Walton
+title: Between Two Swims 
 baseurl: ""
 email: steven@steven-walton.com
 
@@ -12,7 +12,7 @@ markdown: kramdown
 
 
 # Tracker
-analytics: 
+analytics:
 
 # Comments
 disqus-shortname:
@@ -29,7 +29,7 @@ compress_html:
   blanklines: false
   profile: false
   startings: []
-  
+
 
 sass:
  style: compressed
