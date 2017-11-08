@@ -14,12 +14,11 @@ In university, I ended up studying environmental engineering with a focus in wat
 
 --------------
 
-September 2016. My first time running a rapid in a kayak. It's a beginner class III run on the South Platte river. Now the run feels very tame to me, but at the time it seemed terrifying. I was completely out of my element. I've never been a great swimmer, so I've always been a bit afraid of water. I kept wondering to myself, "What the hell am I doing here?"
+September 2016. My first time running a rapid in a kayak. It's was a beginner class III run on the South Platte river. Although the run feels tame to me now, at the time it seemed terrifying. I was completely out of my element. I've never been a great swimmer, so I've always been a bit afraid of water. Paddling into the rapid, I kept wondered to myself, "What the hell am I doing here?"
 
 I reached the bottom of the rapid, but not upright in my kayak. One of the last waves caught my boat and spun me around before flipping me on an eddyline. A rush of icy water, endorphins, and adrenaline. I came out of the water wet, cold, and grinning. I've been addicted ever since.
 
----
-While I've been learning how to kayak and gradually taking on new challenges on the river, I've also busy figuring out what makes the whole thing ticks: from the hydraulics of surf waves and sticky holes to the policy decisions that affect whitewater recreation.
+Since then, I've been gradually taking on new challenges on the river, I've also busy figuring out what makes the whole thing ticks: from the hydraulics of surf waves and sticky holes to the policy decisions that affect whitewater recreation.
 
 My intention for  this blog is to cover a number of river and water resources related topics, some personal and some technical, including:
   * Some of my personal experiences learning how to kayak
