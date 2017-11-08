@@ -11,7 +11,7 @@ Topics you'll find in this blog:
   * Whitewater
   * Kayaking
   * Data analysis  and visualization
-  * Unrelated thoughts on books / book reviews
+  * Unrelated thoughts on things I'm reading  
 
 ---   
 
