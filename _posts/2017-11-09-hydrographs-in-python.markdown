@@ -22,26 +22,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import dates as mdates
 
-plt.style.use('ggplot') # My personal preference for plotstyle
-
 df = pd.read_csv('flow.csv', parse_dates=True)
 precip = pd.read_csv('precip.csv', parse_dates=True)
 precip = precip.resample('12H').sum()
-
 ```
 First, we want to set up our figure, which will consist of 3 subplots on a single 11" x 17" sheet. We will also need to setup a secondary axis for plotting our precipitation data.
 
 ```
+plt.style.use('ggplot') # My personal preference for plotstyle
 fig, axs = plt.subplots(3, 1, figsize=(17,11))
 axs2 = [ax.twinx() for ax in axs]
 ```   
 
-We'd now like to iterate through each axis object in `axs` and plot a corresponding column of our flow DataFrame (df). We can achieve this with `zip`.
+We'd now like to iterate through each axis object in `axs` and plot a corresponding column of our flow DataFrame `df`. We can achieve this with `zip`. When creating our precipitation bar plot, we'll use a width of 0.5 to match our resampling frequency of 12 hours.
 
 ```
 for ax, ax2, column in zip(axs, axs2, df):
     ax.plot(df[column], color='r')
-    # When plotting precipitation, set width based on resample frequency in days
     ax2.bar(precip.index, precip['rainfall [in]'],
             color='#5287A7', alpha=0.35, width=0.5, align='edge')
     # Do any axis formatting you want to do on ax, ax2 inside the for loop
