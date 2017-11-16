@@ -82,6 +82,6 @@ We can do some easy formatting of our datetime axis and gridlines using Matplotl
 Once we're happy with our formatting, we can output with `fig.savefig('output.pdf')`.
 
 Here's our result from the example data I provided:
-![output.png]({{ "/assets/output.png" }})
+![output.png]({{ "/assets/output.svg" }})
 
 The full-size pdf file: [output.pdf]({{ "/assets/output.pdf" }})
