@@ -12,10 +12,11 @@ Hydrographs are an excellent way to clearly visualize how precipitation events a
   * Datetimes: Something Pandas does especially well is handle datetime objects. Less hassle resampling data or formatting a datetime axis on a plot.
   * Aesthetic: I think some of Matplotlib's plotstyles just look very good "out of the box" with only minimal adjustments.
 
-In this example, we'll work with a set of flow meter and rainfall data to plot a set of hydrographs. I've provided a comma-delimited .csv files of the data: [flow.csv]({{ "/assets/flow.csv" }}), [precip.csv]({{ "/assets/precip.csv" }})
+In this example, we'll work with a set of flow meter and rainfall data to plot a set of hydrographs. I've provided a comma-delimited .csv files of the data: [flow.csv]({{ "/assets/flow.csv" }}), [precip.csv]({{ "/assets/precip.csv" }}).
+
 We have three meters - 'A', 'B', and 'C', and would like to plot a hydrograph for each meter in a single figure.
 
-First, import data using pandas. I am resampling the precipitation data to 12-hour timesteps, because it makes for a more legible bar chart given our date range. If you are plotting up data over a short date range, you can shorter timesteps. If you are attempting to plot up years of data without resampling hourly precipitation data, the bars on your bar chart will be very thin and difficult to see.
+First, we'll import data using pandas. I am resampling the precipitation data to 12-hour timesteps, because it makes for a more legible bar chart given our date range.
 
 ```
 import pandas as pd
@@ -26,7 +27,8 @@ df = pd.read_csv('flow.csv', parse_dates=True)
 precip = pd.read_csv('precip.csv', parse_dates=True)
 precip = precip.resample('12H').sum()
 ```
-First, we want to set up our figure, which will consist of 3 subplots on a single 11" x 17" sheet. We will also need to setup a secondary axis for plotting our precipitation data.
+
+Next, we want to set up our figure, which will consist of 3 subplots on a single 11" x 17" sheet. We will also need to setup a secondary axis for plotting our precipitation data.
 
 ```
 plt.style.use('ggplot') # My personal preference for plotstyle
@@ -46,7 +48,7 @@ for ax, ax2, column in zip(axs, axs2, df):
 
 ## Example axis formatting
 
-For my axis formatting, I personally like to color both the y-ticks and y-ticklabels on `ax` to match the red color of my plotted flow rates, and likewise on `ax2` to match the plot color of the precipitation data. This makes it easy for the reader to distinguish visually what data matches the primary axis versus the secondary axis.
+For my axis formatting, I personally like to color both the y-ticks and y-ticklabels on `ax` to match the plot color of my flow data, and likewise with `ax2` to match the plot color of the precipitation data. This makes it easy for the reader to distinguish visually what data matches the primary axis versus the secondary axis.
 
 ```
     ax.set_title(column)
