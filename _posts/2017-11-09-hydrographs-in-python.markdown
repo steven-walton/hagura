@@ -5,20 +5,20 @@ date:   2017-11-9
 categories: python
 ---
 
-Hydrographs are an excellent way to clearly visualize how precipitation events affect measured stream or sewer flows. While it is quite possible to develop hydrographs in Excel, there's some advantages to using python's Pandas and Matplotlib libraries over Excel:
+Hydrographs are an excellent way to clearly visualize how precipitation events affect measured stream or sewer flows. While it is quite possible to develop hydrographs in Excel, there's some advantages to using python's Pandas and Matplotlib libraries:
 
   * Reusability: You can easily adapt your Python code for new data sets, with most robust options for automatically cleaning/processing data
   * Scalability: Handle larger data sets, or data from a large number of source files, with minimal changes to your code
   * Datetimes: Something Pandas does especially well is handle datetime objects. Less hassle resampling data or formatting a datetime axis on a plot.
-  * Aesthetic: I think some of Matplotlib's plotstyles just look very good "out of the box" with only minimal adjustments.
+  * Aesthetic: I think Matplotlib's plotstyles look good "out of the box" with only minimal adjustments.
 
 In this example, we'll work with a set of flow meter and rainfall data to plot a set of hydrographs. I've provided a comma-delimited .csv files of the data: [flow.csv]({{ "/assets/flow.csv" }}), [precip.csv]({{ "/assets/precip.csv" }}).
 
-We have three meters - 'A', 'B', and 'C', and would like to plot a hydrograph for each meter in a single figure.
+We have three flow meters - 'A', 'B', and 'C', and would like to plot a hydrograph for each meter in a single figure.
 
 ## Importing data
 
-First, we'll import data using pandas. I am resampling the precipitation data to 12-hour timesteps, because it makes for a more legible bar chart given our date range.
+First, we'll import data using pandas. I am also resampling the hourly precipitation data to 12-hour timesteps, because it makes for a more legible bar chart given our date range.
 
 ```
 import pandas as pd
