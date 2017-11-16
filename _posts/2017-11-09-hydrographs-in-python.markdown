@@ -16,6 +16,8 @@ In this example, we'll work with a set of flow meter and rainfall data to plot a
 
 We have three meters - 'A', 'B', and 'C', and would like to plot a hydrograph for each meter in a single figure.
 
+## Importing data
+
 First, we'll import data using pandas. I am resampling the precipitation data to 12-hour timesteps, because it makes for a more legible bar chart given our date range.
 
 ```
@@ -27,6 +29,8 @@ df = pd.read_csv('flow.csv', parse_dates=True)
 precip = pd.read_csv('precip.csv', parse_dates=True)
 precip = precip.resample('12H').sum()
 ```
+
+## Plotting the figure
 
 Next, we want to set up our figure, which will consist of 3 subplots on a single 11" x 17" sheet. We will also need to setup a secondary axis for plotting our precipitation data.
 
@@ -72,6 +76,8 @@ We can do some easy formatting of our datetime axis and gridlines using Matplotl
     ax.grid(b=True, which='minor')
     ax2.grid(b=False)  
 ```
+
+## Output
 
 Once we're happy with our formatting, we can output with `fig.savefig('output.pdf')`.
 
