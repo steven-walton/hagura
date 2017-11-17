@@ -5,12 +5,12 @@ date:   2017-11-9
 categories: python
 ---
 
-Hydrographs are an excellent way to clearly visualize how precipitation events affect measured stream or sewer flows. While it is quite possible to develop hydrographs in Excel, there's some advantages to using python's Pandas and Matplotlib libraries:
+Hydrographs are an excellent way to visualize how precipitation events affect measured stream or sewer flows. While it is quite possible to develop hydrographs in Excel, there's some advantages to using python's Pandas and Matplotlib libraries:
 
   * Reusability: You can easily adapt your Python code for new data sets, with most robust options for automatically cleaning/processing data
   * Scalability: Handle larger data sets, or data from a large number of source files, with minimal changes to your code
   * Datetimes: Something Pandas does especially well is handle datetime objects. Less hassle resampling data or formatting a datetime axis on a plot.
-  * Aesthetic: I think Matplotlib's plotstyles look good "out of the box" with only minimal adjustments.
+  * Aesthetic: In my opinion, Matplotlib's plotstyles look good "out of the box" with only minimal adjustments.
 
 In this example, we'll work with a set of flow meter and rainfall data to plot a set of hydrographs. I've provided a comma-delimited .csv files of the data: [flow.csv]({{ "/assets/flow.csv" }}), [precip.csv]({{ "/assets/precip.csv" }}).
 
@@ -18,7 +18,7 @@ We have three flow meters - 'A', 'B', and 'C', and would like to plot a hydrogra
 
 ## Importing data
 
-First, we'll import data using pandas. I am also resampling the hourly precipitation data to 12-hour timesteps, because it makes for a more legible bar chart given our date range.
+First, we'll import data using pandas. We'll resample the hourly precipitation data to 12-hour timesteps, because it makes for a more legible bar chart given our date range.
 
 ```
 import pandas as pd
@@ -32,7 +32,7 @@ precip = precip.resample('12H').sum()
 
 ## Plotting the figure
 
-Next, we want to set up our figure, which will consist of 3 subplots on a single 11" x 17" sheet. We will also need to setup a secondary axis for plotting our precipitation data.
+Next, we want to set up our figure, which will consist of 3 subplots on a single 11" x 17" sheet. We will also need to create a secondary axis for plotting our precipitation data.
 
 ```
 plt.style.use('ggplot') # My personal preference for plotstyle
@@ -66,7 +66,7 @@ For my axis formatting, I personally like to color both the y-ticks and y-tickla
 
 ```
 
-We can do some easy formatting of our datetime axis and gridlines using Matplotlib's `mdates` module. In this case, we'll use it to set our minor grid to days, and set up our date labels to be marked weekly with the string format "Aug 15".
+We can do some simple formatting of our datetime axis and gridlines using Matplotlib's `mdates` module. In this case, we'll use it to set our minor grid to days, and set up our date labels to be marked weekly with the string format "Aug 15".
 
 ```
     dateFmt = mdates.DateFormatter('%b %d')
